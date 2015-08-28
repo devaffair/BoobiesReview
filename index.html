@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Boobs and more" />
+    <title>Boobs and more</title>
+    <meta name="description" content="Boobs and more movie reviews">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- add styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- add javascripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="https://raw.githubusercontent.com/pkozlowski-opensource/angularjs-mongolab/master/src/angular-mongolab.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body>
+	<!-- Initialize a new AngularJS app and associate it with a module named "instantSearch"-->
+	<div ng-app="instantSearch" ng-controller="InstantSearchController">
+
+		<div class="bar">
+			<!-- Create a binding between the searchString model and the text field -->
+			<input type="text" ng-model="searchString" placeholder="Enter your search terms" />
+		</div>
+
+		<ul>
+			<!-- Render a li element for every entry in the items array. Notice
+				 the custom search filter "searchFor". It takes the value of the
+				 searchString model as an argument.
+			 -->
+			<li ng-repeat="i in items | searchFor:searchString">
+				<a target="_new" href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
+				<p>{{i.title}}</p>
+				<br />
+				<div ng-repeat="n in [] | range:i.boobs">
+					<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies"/>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
