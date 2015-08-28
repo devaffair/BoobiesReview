@@ -13,9 +13,9 @@
 
     <!-- add javascripts -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-	<script src="https://raw.githubusercontent.com/pkozlowski-opensource/angularjs-mongolab/master/src/angular-mongolab.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
+	<script src="http://raw.githubusercontent.com/pkozlowski-opensource/angularjs-mongolab/master/src/angular-mongolab.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers.js"></script>
 </head>
 <body>
 	<!-- Initialize a new AngularJS app and associate it with a module named "instantSearch"-->
@@ -36,7 +36,7 @@
 				<p>{{i.title}}</p>
 				<br />
 				<div ng-repeat="n in [] | range:i.boobs">
-					<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies"/>
+					<img src="/images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies"/>
 				</div>
 			</li>
 		</ul>
