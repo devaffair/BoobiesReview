@@ -1,6 +1,5 @@
 // Define a new module for our app. The array holds the names of dependencies if any.
 var app = angular.module('instantSearch', ['mongolabResourceHttp']);
-
 app.constant('MONGOLAB_CONFIG',{API_KEY:'NKRaCGtXiYUhyfa0yiPEm2aw4i7fmE_3', DB_NAME:'boobies'});
 
 app.filter('range', function() {

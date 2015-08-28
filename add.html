@@ -1,0 +1,43 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Boobs and more" />
+    <title>Boobs and more</title>
+    <meta name="description" content="Boobs and more movie reviews">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- add styles -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+    <!-- add javascripts -->
+    <script src="js/angular.min.js"></script>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/app1.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="formCtrl">
+		<form novalidate>
+			IMDB Url:
+			<br>
+			<input type="text" ng-model="user.url"><br>
+			
+			Title:
+			<br>
+			<input type="text" ng-model="user.title"><br>
+			
+			Image Url:
+			<br>
+			<input type="text" ng-model="user.image"><br>
+			
+			Boobies:
+			<br>
+			<input type="text" ng-model="user.boobies">
+			
+			<br><br>
+			<button ng-click="save()">Save</button>
+		</form>
+	</div>
+</body>
+</html>
