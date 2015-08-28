@@ -3,5 +3,5 @@ function InstantSearchController($scope, Movies){
 	
 	Movies.all().then(function(movies){
 		$scope.items = movies;
-	  });
+	});
 }

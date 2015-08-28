@@ -35,7 +35,10 @@ section, footer, header, aside, nav{
 
 	box-shadow: 0 1px 1px #ccc;
 	border-radius: 2px;
-	width: 400px;
+	
+	width: auto;
+	max-width:450px;
+	box-sizing:border-box;
 	padding: 14px;
 	margin: 45px auto 20px;
 	position:relative;
@@ -63,7 +66,8 @@ section, footer, header, aside, nav{
 
 ul{
 	list-style: none;
-	width: 428px;
+	width: auto;
+	max-width:450px;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -93,4 +97,14 @@ img.boobies {
 	height:32px;
 	padding-right:5px;
 	padding-top:5px;
+	cursor:pointer;
 }
+img.boobies.no_boobies {
+	opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+img.boobies.no_boobies:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+} 
+

@@ -10,7 +10,7 @@
 
     <!-- add styles -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-
+	
     <!-- add javascripts -->
     <script src="js/angular.min.js"></script>
 	<script src="js/angular-mongolab.js"></script>
@@ -37,6 +37,9 @@
 				<br />
 				<div ng-repeat="n in [] | range:i.boobs">
 					<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies"/>
+				</div>
+				<div ng-repeat="n in [] | range:(10-i.boobs)">
+					<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies no_boobies"/>
 				</div>
 			</li>
 		</ul>
