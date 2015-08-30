@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>	
+	<!-- Initialize a new AngularJS app and associate it with a module named "instantSearch"-->
+	<div ng-controller="InstantSearchController">		
+		<div class="bar">
+			<input type="text" ng-keyup="searchMovies()" ng-model="searchString" placeholder="Enter your search terms" />
+		</div>
+
+		<ul>
+			<li ng-repeat="i in items">
+				<a target="_new" href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
+				<p>{{i.title}}</p>
+				<div class="boobsWrapper">
+					<div ng-repeat="n in [] | range:i.boobs">
+						<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies"/>
+					</div>
+					<div ng-repeat="n in [] | range:(10-i.boobs)">
+						<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies no_boobies"/>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

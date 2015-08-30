@@ -1,7 +1,7 @@
-var app = angular.module('myApp', []);
-app.constant('MONGOLAB_CONFIG',{API_KEY:'NKRaCGtXiYUhyfa0yiPEm2aw4i7fmE_3', DB_NAME:'boobies'});
+var app1 = angular.module('myApp', []);
+app1.constant('MONGOLAB_CONFIG',{API_KEY:'NKRaCGtXiYUhyfa0yiPEm2aw4i7fmE_3', DB_NAME:'boobies'});
 
-app.controller('formCtrl', function($scope) {
+app1.controller('formCtrl', function($scope) {
 	$scope.master = {
 		url: "John", 
 		title: "Doe",
