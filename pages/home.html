@@ -13,11 +13,11 @@
 				<a target="_new" href="{{i.url}}"><img ng-src="{{i.image}}" /></a>
 				<p>{{i.title}}</p>
 				<div class="boobsWrapper">
-					<div ng-repeat="n in [] | range:i.boobs">
-						<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies"/>
+					<div ng-repeat="n in [] | range:i.votes">
+						<img src="images/boobsOriginal.png" alt='Remove a Boob' title='Remove a Boob' class="boobies" ng-click="Vote($event)"/>
 					</div>
-					<div ng-repeat="n in [] | range:(10-i.boobs)">
-						<img src="images/boobsOriginal.png" alt='Boobie' title='Boobie' class="boobies no_boobies"/>
+					<div ng-repeat="n in [] | rangeNoBoobs:i.votes">
+						<img src="images/boobsOriginal.png" alt='Add a Boob' title='Add a Boob' class="boobies no_boobies" ng-click="Vote($event)"/>
 					</div>
 				</div>
 			</li>

@@ -10,10 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   
 	<script src="js/angular.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/ui-bootstrap-tpls-0.13.0.js"></script>
 	<script src="js/angular-mongolab.js"></script>
 	<script src="js/angular-cookies-1.0.0rc10.js"></script>
-	
+	<script src="js/services.js"></script>
 	<script src="js/app.js"></script>
     <script src="js/controllersMain.js"></script>
 	
@@ -21,9 +22,33 @@
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-66917786-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<script>
+		// Load the SDK asynchronously
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
   </head>
   <body>
-	<h1>Movie Boob Rating</h1>
+	<h1>
+		<span>Movie Boob Rating</span>
+		<div ng-controller="FacebookCtrl">
+			<fb:login-button scope="public_profile,email" onlogin="CheckLoginState();"></fb:login-button>
+		</div>
+	</h1>
     <div class="container" ng-controller="TabsCtrl">
         <div class="row">
             <div class="col-md-12"> 

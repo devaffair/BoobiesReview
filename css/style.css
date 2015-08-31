@@ -160,6 +160,10 @@ img.boobies {
 	padding-top:5px;
 	cursor:pointer;
 }
+img.boobies:hover {
+	opacity: 0.4;
+    filter: alpha(opacity=40);
+}
 img.boobies.no_boobies {
 	opacity: 0.4;
     filter: alpha(opacity=40);
